@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — Chloe Crochets</title>
+  <meta name="description" content="Shop handmade crochet pieces by Chloe." />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/favicon.svg" alt="" />
+        Chloe Crochets
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../events.html">Events</a>
+        <a class="btn btn--primary" href="index.html">Shop Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="shop-header">
+        <h1>Shop All</h1>
+        <p>Every piece is handmade to order. Prototype shop — checkout isn't wired up yet.</p>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="filters">
+          <div class="filter-group">
+            <h3>Type</h3>
+            <div class="filter-tags">
+              <button type="button" class="filter-tag" data-filter="type:Custom">Custom</button>
+              <button type="button" class="filter-tag" data-filter="type:Plushie">Plushie</button>
+              <button type="button" class="filter-tag" data-filter="type:Keychain">Keychain</button>
+              <button type="button" class="filter-tag" data-filter="type:Bouquet">Bouquet</button>
+              <button type="button" class="filter-tag" data-filter="type:Home">Home</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>Color</h3>
+            <div class="filter-tags">
+              <button type="button" class="filter-tag" data-filter="color:Blue">Blue</button>
+              <button type="button" class="filter-tag" data-filter="color:Red">Red</button>
+              <button type="button" class="filter-tag" data-filter="color:Green">Green</button>
+              <button type="button" class="filter-tag" data-filter="color:Pink">Pink</button>
+              <button type="button" class="filter-tag" data-filter="color:Yellow">Yellow</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>Price</h3>
+            <div class="filter-tags">
+              <button type="button" class="filter-tag" data-filter="price:under-15">Under $15</button>
+              <button type="button" class="filter-tag" data-filter="price:15-30">$15&ndash;$30</button>
+              <button type="button" class="filter-tag" data-filter="price:over-30">$30+</button>
+            </div>
+          </div>
+          <button type="button" class="filter-reset" data-filter-reset>Clear filters</button>
+        </aside>
+
+        <div class="product-grid" data-product-grid></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span data-current-year>2026</span> Chloe Crochets. Handmade with care.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/shop.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
