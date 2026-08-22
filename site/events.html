@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events — Chloe Crochets</title>
+  <meta name="description" content="Find Chloe Crochets at upcoming local fairs and markets." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/img/favicon.svg" alt="" />
+        Chloe Crochets
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a class="btn btn--primary" href="shop/index.html">Shop Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ UPCOMING EVENTS ============ -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Find Me</span>
+          <h1>Upcoming Fairs &amp; Markets</h1>
+          <p>This list is meant to be edited often — see the comment in the HTML for how.</p>
+        </div>
+
+        <!--
+          EDITING THIS LIST: each event is one <li class="fair-card"> block.
+          Copy/paste a block to add a new event, edit the text inside, and
+          change "fair-status--upcoming" to "fair-status--past" (and the
+          label text) once it's over. No build step needed — just edit and
+          save this file.
+        -->
+        <ul class="fairs-list">
+          <li class="fair-card">
+            <div class="fair-date"><span class="day">14</span>SEP</div>
+            <div>
+              <p class="fair-name">Riverside Community Fall Fair</p>
+              <p class="fair-meta">10am&ndash;4pm &middot; Riverside Park &middot; Booth #12</p>
+            </div>
+            <span class="fair-status fair-status--upcoming">Upcoming</span>
+          </li>
+          <li class="fair-card">
+            <div class="fair-date"><span class="day">04</span>OCT</div>
+            <div>
+              <p class="fair-name">Main Street Craft Market</p>
+              <p class="fair-meta">9am&ndash;2pm &middot; Downtown Main Street</p>
+            </div>
+            <span class="fair-status fair-status--upcoming">Upcoming</span>
+          </li>
+          <li class="fair-card">
+            <div class="fair-date"><span class="day">22</span>NOV</div>
+            <div>
+              <p class="fair-name">Holiday Handmade Bazaar</p>
+              <p class="fair-meta">11am&ndash;5pm &middot; Community Center</p>
+            </div>
+            <span class="fair-status fair-status--upcoming">Upcoming</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span data-current-year>2026</span> Chloe Crochets. Handmade with care.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
