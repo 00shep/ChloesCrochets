@@ -9,10 +9,22 @@ function priceLabel(product) {
   return formatPrice(product.price);
 }
 
+// A product's `image` is either an emoji placeholder or a path to a real
+// photo (contains a "/"). Real photos get an <img>; placeholders stay text.
+function isImagePath(image) {
+  return image.includes("/");
+}
+
+function renderMedia(product) {
+  return isImagePath(product.image)
+    ? `<img src="${product.image}" alt="${product.name}" />`
+    : product.image;
+}
+
 function renderProductCard(product) {
   return `
     <a class="product-card" href="product.html?id=${product.id}">
-      <div class="product-card__image" aria-hidden="true">${product.image}</div>
+      <div class="product-card__image" aria-hidden="true">${renderMedia(product)}</div>
       <div class="product-card__body">
         <p class="product-card__name">${product.name}</p>
         <p class="product-card__price">${priceLabel(product)}</p>
@@ -130,7 +142,7 @@ function initProductDetail() {
   function render() {
     root.innerHTML = `
       <div class="pdp-grid">
-        <div class="pdp-image" aria-hidden="true">${product.image}</div>
+        <div class="pdp-image" aria-hidden="true">${renderMedia(product)}</div>
         <div>
           <h1 class="pdp-name">${product.name}</h1>
           <p class="pdp-price" data-price>${formatPrice(currentPrice())}</p>

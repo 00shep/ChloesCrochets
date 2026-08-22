@@ -21,6 +21,21 @@ const PRODUCTS = [
     colors: ["Blue", "Red", "Green"],
   },
   {
+    id: "toothless-dragon",
+    name: "Toothless Dragon Plushie",
+    price: 32.0,
+    type: "Custom",
+    image: "../assets/img/products/toothless.png",
+    description: "A soft, handmade crochet Toothless, made to order.",
+    leadTime: "Made to order, ships in 2-4 weeks",
+    customOrder: true,
+    sizes: [
+      { name: "Small", priceDelta: 0 },
+      { name: "Medium", priceDelta: 8 },
+      { name: "Large", priceDelta: 15 },
+    ],
+  },
+  {
     id: "keychain",
     name: "Crochet Keychain",
     price: 8.0,
