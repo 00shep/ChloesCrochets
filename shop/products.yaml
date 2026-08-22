@@ -1,0 +1,54 @@
+# Chloe Crochets — product catalog spec
+#
+# Edit this file to add, remove, or change products, then run:
+#   python sync_catalog.py products.yaml --env sandbox
+# and, once it looks right in the Square sandbox/dashboard:
+#   python sync_catalog.py products.yaml --env production
+#
+# Each product becomes one Square "Item". Each entry under `options` becomes
+# a picker (like a dropdown) on the storefront (e.g. Size, Color). Square
+# automatically creates one priced "Variation" for every combination of
+# option values (Small+Blue, Small+Red, Medium+Blue, ...).
+#
+# Fields:
+#   name         Required. Product title as customers will see it. Also used
+#                to match this product to an existing Square item on re-runs
+#                (see .catalog_ids.json).
+#   base_price   Required. Price in dollars for the "cheapest" combination
+#                (all price_delta values add on top of this).
+#   lead_time    Optional. A short note about how long it takes to make/ship.
+#                Square has no dedicated "lead time" field, so this script
+#                appends it to the item description.
+#   description  Optional. Free-text description of the item.
+#   options      Optional. A map of option-name -> list of {name, price_delta}.
+#                Leave empty/omit entirely for a simple one-price item with
+#                no pickers.
+
+- name: "Custom Crochet - Kirby Style"
+  base_price: 25.00
+  lead_time: "Made to order, ships in 2-3 weeks"
+  description: "A soft, handmade crochet Kirby, made to order just for you."
+  options:
+    size:
+      - {name: Small, price_delta: 0}
+      - {name: Medium, price_delta: 5}
+      - {name: Large, price_delta: 10}
+    color:
+      - {name: Blue}
+      - {name: Red}
+      - {name: Green}
+
+- name: "Crochet Keychain"
+  base_price: 8.00
+  lead_time: "Usually ships within a few days"
+  description: "A small crochet keychain charm."
+  options:
+    color:
+      - {name: Blue}
+      - {name: Red}
+      - {name: Yellow}
+      - {name: Pink}
+
+- name: "Mini Crochet Bouquet"
+  base_price: 15.00
+  description: "A bundle of crochet flowers that never wilt."
