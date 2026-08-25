@@ -9,7 +9,7 @@ const PRODUCTS = [
     name: "Custom Crochet - Kirby Style",
     price: 25.0,
     type: "Custom",
-    image: "🧸",
+    image: "../assets/img/products/kirby.png",
     description: "A soft, handmade crochet Kirby, made to order just for you.",
     leadTime: "Made to order, ships in 2-3 weeks",
     customOrder: true,
